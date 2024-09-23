@@ -94,10 +94,10 @@ public class Reservation  {
         canceledticket.publishAfterCommit();
         
         
-        reserveticket.external.ReservationQuery reservationQuery = new reserveticket.external.ReservationQuery();
-        ReservationApplication.applicationContext
-            .getBean(reserveticket.external.Service.class)
-            .( reservationQuery);
+        // reserveticket.external.ReservationQuery reservationQuery = new reserveticket.external.ReservationQuery();
+        // ReservationApplication.applicationContext
+        //     .getBean(reserveticket.external.Service.class)
+        //     .( reservationQuery);
     }
 
 
