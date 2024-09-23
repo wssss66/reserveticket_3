@@ -81,6 +81,13 @@ public class Ticket {
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void increaseticket(Canceledticket canceledticket) {
+        repository().findById(Long.valueOf(canceledticket.getTicketid())).ifPresent(ticket->{
+            
+            ticket.setStock(ticket.getStock() + canceledticket.getQty()); // do something
+            repository().save(ticket);
+
+
+         });
         //implement business logic here:
 
         /** Example 1:  new item 
