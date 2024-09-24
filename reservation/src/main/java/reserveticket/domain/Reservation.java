@@ -102,6 +102,12 @@ public class Reservation  {
 
 //<<< Clean Arch / Port Method
     public static void updatestatus(OutOfStock outOfStock){
+
+        // repository().findById(outOfStock.getOrderid()).ifPresent(order ->{
+            
+        //     order.set("OrderCancelled");
+        //     repository().save(order);
+        // });
         
         //implement business logic here:
 
