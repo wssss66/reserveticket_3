@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: reservation
-          image: wonsunlyu/reservation:20240924
+          image: user09.azurecr.io/reservation:20240924
           ports:
             - containerPort: 8080
           resources:
