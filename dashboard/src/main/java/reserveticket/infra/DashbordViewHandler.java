@@ -30,6 +30,7 @@ public class DashbordViewHandler {
             dashbord.setOrderid(reservedticket.getId());
             dashbord.setTicketid(reservedticket.getTicketid());
             dashbord.setReservestatus("예약됨");
+            dashbord.setId(reservedticket.getId());
             // view 레파지 토리에 save
             dashbordRepository.save(dashbord);
         } catch (Exception e) {
