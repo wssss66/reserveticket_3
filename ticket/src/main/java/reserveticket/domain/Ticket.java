@@ -30,8 +30,8 @@ public class Ticket {
 
     @PostPersist
     public void onPostPersist() {
-        Increasedticket increasedticket = new Increasedticket(this);
-        increasedticket.publishAfterCommit();
+        // Increasedticket increasedticket = new Increasedticket(this);
+        // increasedticket.publishAfterCommit();
 
         Decreasedticket decreasedticket = new Decreasedticket(this);
         decreasedticket.publishAfterCommit();
@@ -53,13 +53,6 @@ public class Ticket {
     //<<< Clean Arch / Port Method
     public static void decreaseTicket(Reservedticket reservedticket) {
 
-        repository().findById(Long.valueOf(reservedticket.getTicketid())).ifPresent(ticket->{
-            
-            ticket.setStock(ticket.getStock() - reservedticket.getQty()); // do something
-            repository().save(ticket);
-
-
-         });
 
          repository().findById(Long.valueOf(reservedticket.getTicketid())).ifPresent(ticket->{
             if(ticket.getStock() >= reservedticket.getQty()){
