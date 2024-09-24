@@ -60,6 +60,8 @@ public class Ticket {
 
         Decreasedticket decreasedticket = new Decreasedticket(ticket);
         decreasedticket.publishAfterCommit();
+        OutOfStock outOfStock = new OutOfStock(ticket);
+        outOfStock.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -71,6 +73,8 @@ public class Ticket {
 
             Decreasedticket decreasedticket = new Decreasedticket(ticket);
             decreasedticket.publishAfterCommit();
+            OutOfStock outOfStock = new OutOfStock(ticket);
+            outOfStock.publishAfterCommit();
 
          });
         */
