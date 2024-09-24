@@ -16,4 +16,5 @@ public class Canceledticket extends AbstractEvent {
     private Double amount;
     private Long customer;
     private String ticketid;
+    private String status;
 }

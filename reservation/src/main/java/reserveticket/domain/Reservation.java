@@ -56,6 +56,11 @@ public class Reservation  {
     
     
     private Long customer;
+    
+    
+    
+    
+    private String status;
 
     @PostPersist
     public void onPostPersist(){
