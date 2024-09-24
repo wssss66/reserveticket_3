@@ -60,6 +60,24 @@ public class Ticket {
 
 
          });
+
+         repository().findById(Long.valueOf(reservedticket.getTicketid())).ifPresent(ticket->{
+            if(ticket.getStock() >= reservedticket.getQty()){
+                ticket.setStock(ticket.getStock() - reservedticket.getQty()); 
+                repository().save(ticket);
+
+                Decreasedticket decreasedticket = new Decreasedticket(ticket);
+                decreasedticket.publishAfterCommit();
+
+            }else{
+            //     OutOfStock outOfStock = new OutOfStock(ticket);
+            //     outOfStock.set(reservedticket.getId()); 
+            //     outOfStock.publishAfterCommit();
+            }
+            
+        });
+
+         
         //implement business logic here:
 
         /** Example 1:  new item 
