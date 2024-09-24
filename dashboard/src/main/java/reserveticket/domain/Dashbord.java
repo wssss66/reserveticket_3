@@ -19,4 +19,6 @@ public class Dashbord {
     private String name;
     private String ticketid;
     private String stock;
+    private Long orderid;
+    private String reservestatus;
 }

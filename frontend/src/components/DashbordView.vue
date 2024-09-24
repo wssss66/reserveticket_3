@@ -25,6 +25,8 @@
                 { text: "name", value: "name" },
                 { text: "ticketid", value: "ticketid" },
                 { text: "stock", value: "stock" },
+                { text: "orderid", value: "orderid" },
+                { text: "reservestatus", value: "reservestatus" },
             ],
             dashbord : [],
         }),

@@ -70,6 +70,7 @@
                     { text: "userid", value: "userid" },
                     { text: "customer", value: "customer" },
                     { text: "point", value: "point" },
+                    { text: "pointstatus", value: "pointstatus" },
                 ],
             point : [],
             newValue: {},
@@ -90,6 +91,7 @@
                 'userid': '',
                 'customer': 0,
                 'point': 0,
+                'pointstatus': '',
             }
         },
         methods: {

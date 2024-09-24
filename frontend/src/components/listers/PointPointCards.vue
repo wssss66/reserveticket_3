@@ -112,6 +112,7 @@
                 'userid': '',
                 'customer': 0,
                 'point': 0,
+                'pointstatus': '',
             }
         },
         methods:{
