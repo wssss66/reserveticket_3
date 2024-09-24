@@ -70,9 +70,9 @@ public class Ticket {
                 decreasedticket.publishAfterCommit();
 
             }else{
-            //     OutOfStock outOfStock = new OutOfStock(ticket);
-            //     outOfStock.set(reservedticket.getId()); 
-            //     outOfStock.publishAfterCommit();
+                OutOfStock outOfStock = new OutOfStock(ticket);
+                outOfStock.setOrderid(reservedticket.getId()); 
+                outOfStock.publishAfterCommit();
             }
             
         });
