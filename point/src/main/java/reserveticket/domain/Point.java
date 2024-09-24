@@ -46,7 +46,7 @@ public class Point {
     }
 
     //<<< Clean Arch / Port Method
-    public static void incresepoint(Reservedticket reservedticket) {
+    public static void incresepoint(Decreasedticket decreasedticket) {
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -59,7 +59,7 @@ public class Point {
 
         /** Example 2:  finding and process
         
-        repository().findById(reservedticket.get???()).ifPresent(point->{
+        repository().findById(decreasedticket.get???()).ifPresent(point->{
             
             point // do something
             repository().save(point);
@@ -74,7 +74,7 @@ public class Point {
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
-    public static void decreasePoint(Canceledticket canceledticket) {
+    public static void decreasePoint(Increasedticket increasedticket) {
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -87,7 +87,7 @@ public class Point {
 
         /** Example 2:  finding and process
         
-        repository().findById(canceledticket.get???()).ifPresent(point->{
+        repository().findById(increasedticket.get???()).ifPresent(point->{
             
             point // do something
             repository().save(point);
