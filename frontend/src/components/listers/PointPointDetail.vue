@@ -14,6 +14,9 @@
             <div>
                 <Number label="Point" v-model="item.point" :editMode="editMode" @change="change" />
             </div>
+            <div>
+                <String label="Pointstatus" v-model="item.pointstatus" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>

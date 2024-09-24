@@ -15,6 +15,7 @@ public class Increasedpoint extends AbstractEvent {
     private String userid;
     private Long customer;
     private Integer point;
+    private String pointstatus;
 
     public Increasedpoint(Point aggregate) {
         super(aggregate);

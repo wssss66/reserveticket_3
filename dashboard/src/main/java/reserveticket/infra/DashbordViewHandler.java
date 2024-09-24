@@ -16,5 +16,38 @@ public class DashbordViewHandler {
     //<<< DDD / CQRS
     @Autowired
     private DashbordRepository dashbordRepository;
+
+    @StreamListener(KafkaProcessor.INPUT)
+    public void whenReservedticket_then_CREATE_1(
+        @Payload Reservedticket reservedticket
+    ) {
+        try {
+            if (!reservedticket.validate()) return;
+
+            // view 객체 생성
+            Dashbord dashbord = new Dashbord();
+            // view 객체에 이벤트의 Value 를 set 함
+            dashbord.setOrderid(reservedticket.getId());
+            dashbord.setTicketid(reservedticket.getTicketid());
+            dashbord.setReservestatus("예약됨");
+            // view 레파지 토리에 save
+            dashbordRepository.save(dashbord);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @StreamListener(KafkaProcessor.INPUT)
+    public void whenCanceledticket_then_UPDATE_1(
+        @Payload Canceledticket canceledticket
+    ) {
+        try {
+            if (!canceledticket.validate()) return;
+            // view 객체 조회
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     //>>> DDD / CQRS
 }

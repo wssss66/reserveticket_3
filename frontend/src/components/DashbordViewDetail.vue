@@ -15,6 +15,12 @@
             <div>
                 <String label="Stock" v-model="item.stock" :editMode="editMode" @change="change" />
             </div>
+            <div>
+                <Number label="Orderid" v-model="item.orderid" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="Reservestatus" v-model="item.reservestatus" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
     </v-card>
 

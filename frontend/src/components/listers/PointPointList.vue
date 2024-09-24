@@ -44,6 +44,7 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -51,6 +52,7 @@
                             [ Userid :  {{data.userid }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Customer :  {{data.customer }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Point :  {{data.point }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Pointstatus :  {{data.pointstatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -121,6 +123,7 @@
                 'userid': '',
                 'customer': 0,
                 'point': 0,
+                'pointstatus': '',
             }
         },
         methods: {

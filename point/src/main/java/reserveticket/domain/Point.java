@@ -25,6 +25,8 @@ public class Point {
 
     private Integer point;
 
+    private String pointstatus;
+
     @PostPersist
     public void onPostPersist() {
         Increasedpoint increasedpoint = new Increasedpoint(this);
