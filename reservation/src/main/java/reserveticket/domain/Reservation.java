@@ -100,6 +100,31 @@ public class Reservation  {
         //     .( reservationQuery);
     }
 
+//<<< Clean Arch / Port Method
+    public static void updatestatus(OutOfStock outOfStock){
+        
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        Reservation reservation = new Reservation();
+        repository().save(reservation);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(outOfStock.get???()).ifPresent(reservation->{
+            
+            reservation // do something
+            repository().save(reservation);
+
+
+         });
+        */
+
+        
+    }
+//>>> Clean Arch / Port Method
 
 
 }

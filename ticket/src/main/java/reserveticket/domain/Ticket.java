@@ -8,6 +8,7 @@ import lombok.Data;
 import reserveticket.TicketApplication;
 import reserveticket.domain.Decreasedticket;
 import reserveticket.domain.Increasedticket;
+import reserveticket.domain.OutOfStock;
 
 @Entity
 @Table(name = "Ticket_table")
@@ -34,6 +35,12 @@ public class Ticket {
 
         Decreasedticket decreasedticket = new Decreasedticket(this);
         decreasedticket.publishAfterCommit();
+    }
+
+    @PostUpdate
+    public void onPostUpdate() {
+        OutOfStock outOfStock = new OutOfStock(this);
+        outOfStock.publishAfterCommit();
     }
 
     public static TicketRepository repository() {
