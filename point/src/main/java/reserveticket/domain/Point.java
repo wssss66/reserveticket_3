@@ -50,10 +50,10 @@ public class Point {
         //implement business logic here:
 
         Point point = new Point();
-        point.setUserid(reservedticket.getUserid());
+        point.setUserid(decreasedticket.getUserid());
         point.setPoint(point.getPoint() + 10);
-        point.setUserid(reservedticket.getUserid());
-        point.setOrderid(reservedticket.getId());
+        point.setUserid(decreasedticket.getUserid());
+        point.setOrderid(decreasedticket.getId());
         repository().save(point);
 
         /** Example 1:  new item 

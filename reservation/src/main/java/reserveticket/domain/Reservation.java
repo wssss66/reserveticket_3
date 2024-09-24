@@ -66,13 +66,13 @@ public class Reservation  {
     public void onPostPersist(){
 
 
-        Reservedticket reservedticket = new Reservedticket(this);
-        reservedticket.publishAfterCommit();
+        // Reservedticket reservedticket = new Reservedticket(this);
+        // reservedticket.publishAfterCommit();
 
 
 
-        Canceledticket canceledticket = new Canceledticket(this);
-        canceledticket.publishAfterCommit();
+        // Canceledticket canceledticket = new Canceledticket(this);
+        // canceledticket.publishAfterCommit();
 
     
     }
