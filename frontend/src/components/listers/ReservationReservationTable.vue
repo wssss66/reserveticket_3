@@ -73,6 +73,7 @@
                     { text: "qty", value: "qty" },
                     { text: "amount", value: "amount" },
                     { text: "customer", value: "customer" },
+                    { text: "status", value: "status" },
                 ],
             reservation : [],
             newValue: {},
@@ -96,6 +97,7 @@
                 'qty': 0,
                 'amount': 0,
                 'customer': 0,
+                'status': '',
             }
         },
         methods: {

@@ -115,6 +115,7 @@
                 'qty': 0,
                 'amount': 0,
                 'customer': 0,
+                'status': '',
             }
         },
         methods:{

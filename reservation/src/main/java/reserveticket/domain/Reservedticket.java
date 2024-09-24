@@ -18,6 +18,7 @@ public class Reservedticket extends AbstractEvent {
     private Double amount;
     private Long customer;
     private String ticketid;
+    private String status;
 
     public Reservedticket(Reservation aggregate) {
         super(aggregate);
