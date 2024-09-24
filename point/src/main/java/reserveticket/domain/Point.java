@@ -49,6 +49,13 @@ public class Point {
     public static void incresepoint(Reservedticket reservedticket) {
         //implement business logic here:
 
+        Point point = new Point();
+        point.setUserid(reservedticket.getUserid());
+        point.setPoint(point.getPoint() + 10);
+        point.setUserid(reservedticket.getUserid());
+        point.setOrderid(reservedticket.getId());
+        repository().save(point);
+
         /** Example 1:  new item 
         Point point = new Point();
         repository().save(point);
