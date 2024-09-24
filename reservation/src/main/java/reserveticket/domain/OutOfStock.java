@@ -15,4 +15,5 @@ public class OutOfStock extends AbstractEvent {
     private String userid;
     private Long customer;
     private Long reserveid;
+    private Long orderid;
 }

@@ -17,6 +17,7 @@ public class OutOfStock extends AbstractEvent {
     private String userid;
     private Long customer;
     private Long reserveid;
+    private Long orderid;
 
     public OutOfStock(Ticket aggregate) {
         super(aggregate);
