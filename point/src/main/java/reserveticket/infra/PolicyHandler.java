@@ -25,14 +25,14 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='Decreasedticket'"
+        condition = "headers['type']=='Reservedticket'"
     )
-    public void wheneverDecreasedticket_Incresepoint(
-        @Payload Decreasedticket decreasedticket
+    public void wheneverReservedticket_Incresepoint(
+        @Payload Reservedticket reservedticket
     ) {
-        Decreasedticket event = decreasedticket;
+        Reservedticket event = reservedticket;
         System.out.println(
-            "\n\n##### listener Incresepoint : " + decreasedticket + "\n\n"
+            "\n\n##### listener Incresepoint : " + reservedticket + "\n\n"
         );
 
         // Sample Logic //
@@ -41,14 +41,14 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='Increasedticket'"
+        condition = "headers['type']=='Canceledticket'"
     )
-    public void wheneverIncreasedticket_DecreasePoint(
-        @Payload Increasedticket increasedticket
+    public void wheneverCanceledticket_DecreasePoint(
+        @Payload Canceledticket canceledticket
     ) {
-        Increasedticket event = increasedticket;
+        Canceledticket event = canceledticket;
         System.out.println(
-            "\n\n##### listener DecreasePoint : " + increasedticket + "\n\n"
+            "\n\n##### listener DecreasePoint : " + canceledticket + "\n\n"
         );
 
         // Sample Logic //

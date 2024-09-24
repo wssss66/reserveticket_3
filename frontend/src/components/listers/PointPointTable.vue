@@ -71,6 +71,7 @@
                     { text: "customer", value: "customer" },
                     { text: "point", value: "point" },
                     { text: "pointstatus", value: "pointstatus" },
+                    { text: "orderid", value: "orderid" },
                 ],
             point : [],
             newValue: {},
@@ -92,6 +93,7 @@
                 'customer': 0,
                 'point': 0,
                 'pointstatus': '',
+                'orderid': 0,
             }
         },
         methods: {

@@ -38,13 +38,22 @@ public class DashbordViewHandler {
     }
 
     @StreamListener(KafkaProcessor.INPUT)
-    public void whenCanceledticket_then_UPDATE_1(
-        @Payload Canceledticket canceledticket
+    public void whenIncreasedpoint_then_UPDATE_1(
+        @Payload Increasedpoint increasedpoint
     ) {
         try {
-            if (!canceledticket.validate()) return;
+            if (!increasedpoint.validate()) return;
             // view 객체 조회
 
+            List<Dashbord> dashbordList = dashbordRepository.findByOrderid(
+                increasedpoint.getOrderid()
+            );
+            for (Dashbord dashbord : dashbordList) {
+                // view 객체에 이벤트의 eventDirectValue 를 set 함
+                dashbord.setPointstatus("포인트추가");
+                // view 레파지 토리에 save
+                dashbordRepository.save(dashbord);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

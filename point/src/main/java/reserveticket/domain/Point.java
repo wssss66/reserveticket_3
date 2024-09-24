@@ -27,6 +27,8 @@ public class Point {
 
     private String pointstatus;
 
+    private Long orderid;
+
     @PostPersist
     public void onPostPersist() {
         Increasedpoint increasedpoint = new Increasedpoint(this);
@@ -44,7 +46,7 @@ public class Point {
     }
 
     //<<< Clean Arch / Port Method
-    public static void incresepoint(Decreasedticket decreasedticket) {
+    public static void incresepoint(Reservedticket reservedticket) {
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -57,7 +59,7 @@ public class Point {
 
         /** Example 2:  finding and process
         
-        repository().findById(decreasedticket.get???()).ifPresent(point->{
+        repository().findById(reservedticket.get???()).ifPresent(point->{
             
             point // do something
             repository().save(point);
@@ -72,7 +74,7 @@ public class Point {
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
-    public static void decreasePoint(Increasedticket increasedticket) {
+    public static void decreasePoint(Canceledticket canceledticket) {
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -85,7 +87,7 @@ public class Point {
 
         /** Example 2:  finding and process
         
-        repository().findById(increasedticket.get???()).ifPresent(point->{
+        repository().findById(canceledticket.get???()).ifPresent(point->{
             
             point // do something
             repository().save(point);

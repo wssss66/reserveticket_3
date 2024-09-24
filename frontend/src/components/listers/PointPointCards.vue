@@ -113,6 +113,7 @@
                 'customer': 0,
                 'point': 0,
                 'pointstatus': '',
+                'orderid': 0,
             }
         },
         methods:{

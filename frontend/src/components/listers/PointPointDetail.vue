@@ -17,6 +17,9 @@
             <div>
                 <String label="Pointstatus" v-model="item.pointstatus" :editMode="editMode" @change="change" />
             </div>
+            <div>
+                <Number label="Orderid" v-model="item.orderid" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>

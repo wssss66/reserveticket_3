@@ -21,4 +21,6 @@ public class Dashbord {
     private String stock;
     private Long orderid;
     private String reservestatus;
+    private Integer point;
+    private String pointstatus;
 }

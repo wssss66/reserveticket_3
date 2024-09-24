@@ -2,13 +2,10 @@ package reserveticket.domain;
 
 import java.time.LocalDate;
 import java.util.*;
-import lombok.*;
-import reserveticket.domain.*;
+import lombok.Data;
 import reserveticket.infra.AbstractEvent;
 
-//<<< DDD / Domain Event
 @Data
-@ToString
 public class Increasedpoint extends AbstractEvent {
 
     private Long id;
@@ -17,13 +14,4 @@ public class Increasedpoint extends AbstractEvent {
     private Integer point;
     private String pointstatus;
     private Long orderid;
-
-    public Increasedpoint(Point aggregate) {
-        super(aggregate);
-    }
-
-    public Increasedpoint() {
-        super();
-    }
 }
-//>>> DDD / Domain Event

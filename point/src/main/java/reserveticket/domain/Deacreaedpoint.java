@@ -16,6 +16,7 @@ public class Deacreaedpoint extends AbstractEvent {
     private Long customer;
     private Integer point;
     private String pointstatus;
+    private Long orderid;
 
     public Deacreaedpoint(Point aggregate) {
         super(aggregate);

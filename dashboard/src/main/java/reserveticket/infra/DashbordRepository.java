@@ -7,4 +7,6 @@ import reserveticket.domain.*;
 
 @RepositoryRestResource(collectionResourceRel = "dashbords", path = "dashbords")
 public interface DashbordRepository
-    extends PagingAndSortingRepository<Dashbord, Long> {}
+    extends PagingAndSortingRepository<Dashbord, Long> {
+    List<Dashbord> findByOrderid(Long orderid);
+}

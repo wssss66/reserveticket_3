@@ -27,6 +27,8 @@
                 { text: "stock", value: "stock" },
                 { text: "orderid", value: "orderid" },
                 { text: "reservestatus", value: "reservestatus" },
+                { text: "point", value: "point" },
+                { text: "pointstatus", value: "pointstatus" },
             ],
             dashbord : [],
         }),
